@@ -1,0 +1,35 @@
+<!-- Main Container -->
+<div class="flex flex-col gap-16 justify-center items-center w-full p-16">
+    <!-- Create Post Title -->
+    <h1 class="poppins-black text-4xl text-black w-full">Create a New Post</h1>
+    
+    <!-- Actual Posts Form -->
+    <form class="flex flex-col gap-12 w-full items-center" [formGroup]="postsForm" #formDirective="ngForm" (ngSubmit)="onSubmit(postsForm.value)" novalidate action="">
+
+        <!-- Inputs Grid Container -->
+        <div class="flex flex-col gap-8 w-full">
+
+            <!-- Title Input Container -->
+            <div class="flex flex-row gap-5 w-full items-center">
+                <!-- Title Label -->
+                <h1 class="montserrat-bold text-lg">Title:</h1>
+                <!-- Title Input -->
+                <input class="w-full host-grotesk-regular text-base bg-slate-50 focus:outline-none " formControlName="title" type="text" placeholder="Enter an amazing title!">
+            </div>
+
+            <!-- Body Input Container -->
+            <div class="flex flex-col gap-4">
+                <!-- Body Label -->
+                <h1 class="montserrat-bold text-lg">Body:</h1>
+                <!-- Body Text Input -->
+                <textarea class="w-full lato-regular text-base bg-slate-50 focus:outline-none" formControlName="body" rows="10" placeholder="Enter your thoughts here!"></textarea>
+            </div>
+        </div>
+        
+        <!-- Login Button -->
+        <button class="p-3 border-4 border-orange-500 bg-orange-500 text-white rounded-lg montserrat-black text-base w-1/6 transition duration-300 hover:shadow-lg hover:scale-105 self-start" type="submit" >Post</button>
+        
+    </form>
+</div>
+    
+    

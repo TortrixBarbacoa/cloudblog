@@ -1,0 +1,37 @@
+<div class="flex flex-col mx-auto w-full h-screen items-center justify-center">
+
+    <!-- Main Container -->
+    <div class="flex flex-col gap-16 justify-center items-center rounded-2xl bg-white w-1/3 h-fit px-4 py-16 shadow-xl hover:shadow-2xl transition duration-500">
+        <!-- Login Title -->
+        <h1 class="poppins-black text-3xl text-orange-500">Login</h1>
+        
+        <!-- Actual Login Form -->
+        <form class="flex flex-col gap-12 w-11/12 items-center" [formGroup]="loginForm" (ngSubmit)="login()" novalidate action="">
+
+            <!-- Inputs Grid Container -->
+            <div class="flex flex-col gap-8 w-full">
+
+                <!-- Username Input Container -->
+                <div class="flex flex-col gap-1">
+                    <!-- Username Label -->
+                    <h1 class="montserrat-bold text-lg">Username</h1>
+                    <!-- Username Input -->
+                    <input class="p-3 border-2 border-black rounded-lg host-grotesk-regular text-base focus:outline-none focus:border-orange-500 focus:shadow-md transition duration-300 hover:border-orange-500 hover:shadow-md" formControlName="username" type="text" placeholder="Enter your username">
+                </div>
+
+                <!-- Password Input Container -->
+                <div class="flex flex-col gap-1">
+                    <!-- Password Label -->
+                    <h1 class="montserrat-bold text-lg">Password</h1>
+                    <!-- Password Input -->
+                    <input class="p-3 border-2 border-black rounded-lg host-grotesk-regular text-base focus:outline-none focus:border-orange-500 focus:shadow-md transition duration-300 hover:border-orange-500 hover:shadow-md" formControlName="password" type="password" placeholder="Enter your password">
+                </div>
+            </div>
+            
+            <!-- Login Button -->
+            <button class="p-3 border-4 border-orange-500 hover:bg-orange-500 hover:text-white text-black rounded-lg montserrat-black text-base w-1/2 transition duration-300 shadow-md" type="submit" [disabled]="!loginForm.valid">Login</button>
+            
+        </form>
+    </div>
+    
+</div>

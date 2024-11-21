@@ -1,0 +1,36 @@
+<!-- Navbar -->
+<nav class="py-7 px-12 border-b-2 border-orange-500 bg-slate-50 shadow-md">
+    <div class="w-full mx-auto flex justify-between">
+
+        <!-- Plain Text -->
+        <div class="flex gap-12 items-center">
+            <!-- Main Title -->
+            <h1 class="text-orange-500 text-2xl poppins-black mr-5 cursor-default">Cloud Blog!</h1>
+
+            <!-- * Links * -->
+            <!-- HomeFeed -->
+            <a *ngIf="isAuthenticated" href="/home" class="text-black text-base montserrat-bold hover:border-b-4 hover:border-orange-500 transition-all">Home Feed</a>
+            <!-- Following -->
+            <a *ngIf="isAuthenticated" href="#" class="text-black text-base montserrat-bold hover:border-b-4 hover:border-orange-500 transition-all">Following</a>
+
+        </div>
+        
+        <!-- Text + Icons -->
+        <div class="flex gap-8">
+
+            <!-- * Fancier Links * -->
+             <!-- Notifications -->
+            <a *ngIf="isAuthenticated" href="#" class="text-black text-base montserrat-bold"><i class="text-lg fa-solid fa-bell mr-1.5 text-orange-500"></i>Notifications</a>
+            <!-- New Post -->
+            <a *ngIf="isAuthenticated" href="/create-post" class="text-black text-base montserrat-bold"><i class="text-lg fa-solid fa-square-plus mr-1.5 text-orange-500"></i>New Post</a>
+            <!-- Login -->
+            <a *ngIf="!isAuthenticated" href="/login" class="text-orange-500 text-base montserrat-bold"><i class="text-lg fa-solid fa-right-to-bracket mr-1.5"></i></a>
+            <!-- Login -->
+            <a *ngIf="!isAuthenticated" href="/signup" class="text-orange-500 text-base montserrat-bold"><i class="text-lg fa-solid fa-user-plus mr-1.5"></i></a>
+            <!-- Logout -->
+            <a *ngIf="isAuthenticated" (click)="logout()" href="#" class="text-red-500 text-base montserrat-bold"><i class="text-lg fa-solid fa-right-from-bracket mr-1.5"></i></a>
+            
+            
+        </div>
+    </div>
+</nav>
