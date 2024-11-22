@@ -38,7 +38,7 @@ export class PostsService {
 
   createPost(formData: Partial<Post>): Observable<Post> {
     return this.http
-      .post<Post>(this.url, { title: formData.title, body: formData.body }, this.httpOptions)
+      .post<Post>(this.url, { title: formData.title, body: formData.body, imageUrl: formData.imageUrl }, this.httpOptions)
       .pipe(
         first(),
         catchError(this.errorHandlerService.handleError<Post>("createPost"))

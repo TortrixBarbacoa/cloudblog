@@ -14,7 +14,15 @@
                 <!-- Title Label -->
                 <h1 class="montserrat-bold text-lg">Title:</h1>
                 <!-- Title Input -->
-                <input class="w-full host-grotesk-regular text-base bg-slate-50 focus:outline-none " formControlName="title" type="text" placeholder="Enter an amazing title!">
+                <input class="w-full host-grotesk-regular text-base bg-slate-50 focus:outline-none" formControlName="title" type="text" placeholder="Enter an amazing title!">
+            </div>
+
+            <!-- Image Upload Container -->
+            <div class="flex flex-row gap-5 w-full items-center">
+                <!-- Image Upload Label -->
+                <h1 class="montserrat-bold text-lg">Upload Image:</h1>
+                <!-- Image Upload Input -->
+                <input class="w-full host-grotesk-regular text-base bg-slate-50 focus:outline-none" type="file" (change)="onFileSelected($event)">
             </div>
 
             <!-- Body Input Container -->
@@ -26,10 +34,9 @@
             </div>
         </div>
         
-        <!-- Login Button -->
-        <button class="p-3 border-4 border-orange-500 bg-orange-500 text-white rounded-lg montserrat-black text-base w-1/6 transition duration-300 hover:shadow-lg hover:scale-105 self-start" type="submit" >Post</button>
-        
+        <!-- Submit Button -->
+        <button type="submit" class="w-full py-2 px-4 bg-orange-500 text-white rounded-md shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+            Create Post
+        </button>
     </form>
 </div>
-    
-    
