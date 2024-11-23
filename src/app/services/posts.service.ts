@@ -13,7 +13,7 @@ import { ErrorHandlerService } from './error-handler.service';
 })
 export class PostsService {
 
-  private url = "http://localhost:3000/post";
+  private url = "http://54.165.119.117:3000/post";
 
   constructor(private http: HttpClient, private errorHandlerService: ErrorHandlerService, private router: Router) { }
 

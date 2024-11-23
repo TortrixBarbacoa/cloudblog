@@ -10,7 +10,7 @@ import { ErrorHandlerService } from './error-handler.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private url = 'http://localhost:3000/auth';
+  private url = 'http://54.165.119.117:3000/auth';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
